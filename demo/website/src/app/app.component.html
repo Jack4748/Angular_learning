@@ -1,0 +1,15 @@
+<!-- <li routerLink="home"> Home </li>
+<li routerLink="about"> About </li>
+<router-outlet></router-outlet> -->
+<!-- <app-about-page title="abc"></app-about-page>
+<app-about-page [title]=title></app-about-page> -->
+<!-- <app-card (update)="onUpdate($event)"></app-card>
+
+<p>{{cardTitle}}</p> -->
+<ng-container *ngIf ="showCard">
+    <div *ngFor="let item of cardData">
+        <app-card [title] = "item.title" [shortText]="item.shortText"></app-card>
+    </div>
+<ng-container>
+
+
