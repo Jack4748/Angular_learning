@@ -1,9 +1,0 @@
-<h3>{{title}}</h3>
-<p *ngIf="isHide; else showTemp">{{shortText}}</p>
-<ng-template #showTemp>
-    <p>Updated</p>
-</ng-template>
-<button (click) = "onChange()">Load data</button>
-
-
-
