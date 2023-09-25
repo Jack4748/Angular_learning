@@ -1,0 +1,21 @@
+<h3>{{title}}</h3>
+<div *ngIf="isHide; else showTemp">
+    <button (click)="getData()">Get Data</button>
+</div>
+<ng-template #showTemp>
+    <p class="updated"><span>Updated Sucessfully</span></p>
+    <table class="my-table">
+        <thead>
+        <tr>
+            <th>Serial No.</th>
+            <th *ngFor="let header of tabKey">{{ header }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of tabValue; let i = index">
+            <td>{{ i + 1 }}</td> <!-- Serial number column -->
+            <td *ngFor="let val of item"> {{val}} </td>
+        </tr>
+        </tbody>
+    </table> 
+</ng-template>
